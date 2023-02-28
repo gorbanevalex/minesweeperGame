@@ -1,0 +1,268 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+/* body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+} */
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+body{
+ margin:0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+}
+.sapper{
+ /* width: 300px;
+ height: 350px; */
+ background-color: rgb(189, 189, 189);
+ padding:10px;
+}
+
+.sapper-top{
+ width: 100%;
+ height: 60px;
+ background-color: rgb(192, 192, 192);
+ -webkit-box-shadow: 3px 3px 7px 0px rgba(123, 123, 123, 0.2) inset;
+-moz-box-shadow: 3px 3px 7px 0px rgba(123, 123, 123, 0.2) inset;
+box-shadow: 3px 3px 7px 0px rgba(123, 123, 123, 0.2) inset;
+display: flex;
+align-items: center;
+padding:0 15px;
+justify-content: space-between;
+}
+
+.sapper-minutes,.sapper-seconds{
+ display: flex;
+}
+
+.sapper-minutes > span,.sapper-seconds > span{
+  display: block;
+  width: 22px;
+  height: 40px;
+}
+
+.sapper-button{
+ border:none;
+ outline: none;
+ padding:0;
+}
+.sapper-button > span{
+ width: 48px;
+ height: 48px;
+ display: block;
+ border:none;
+ outline: none;
+}
+
+.sapper-fields{
+  display: grid;
+  grid-template-columns: repeat(16,20px);
+}
+
+.sapper-fields > button{
+  height: 20px;
+}
+
+.smile-default{
+ background: url('./assets/happyEmoticon.png');
+ background-size: contain;
+}
+
+.smile-scary{
+  background: url('./assets/scary-emoticon.png');
+  background-size: cover;
+}
+.smile-dead{
+  background: url('./assets/dead-emoticon.png');
+  background-size: cover;
+}
+.smile-win{
+  background: url('./assets/win-emoticon.png');
+  background-size: cover;
+}
+.show-bombs{
+  background: url('./assets/mines-show.png');
+  background-size: cover;
+  border:none;
+}
+
+.flag{
+  background: url('./assets/flag.png');
+  background-size: contain;
+}
+.question-full{
+  background: url('./assets/question-full.png');
+  background-size: contain;
+}
+.question-empty{
+  background: url('./assets/question-empty.png');
+  background-size: contain;
+}
+
+.close-cell{
+  background: url('./assets/closeCell.png');
+  background-size: contain;
+  cursor: pointer;
+}
+
+.open-cell{
+  background: url('./assets/openCell.png');
+  background-size: contain;
+}
+
+.time-00{
+ background: url('./assets/00.png');
+ background-size: contain;
+}
+.time-01{
+ background: url('./assets/01.png');
+ background-size: contain;
+}
+.time-02{
+ background: url('./assets/02.png');
+ background-size: contain;
+}
+.time-03{
+ background: url('./assets/03.png');
+ background-size: contain;
+}
+.time-04{
+ background: url('./assets/04.png');
+ background-size: contain;
+}
+.time-05{
+ background: url('./assets/05.png');
+ background-size: contain;
+}
+.time-06{
+ background: url('./assets/06.png');
+ background-size: contain;
+}
+.time-07{
+ background: url('./assets/07.png');
+ background-size: contain;
+}
+.time-08{
+ background: url('./assets/08.png');
+ background-size: contain;
+}
+.time-09{
+ background: url('./assets/09.png');
+ background-size: contain;
+}
+
+.around-01{
+  background: url('./assets/around-01.png');
+  background-size: contain;
+}
+.around-02{
+  background: url('./assets/around-02.png');
+  background-size: contain;
+}
+.around-03{
+  background: url('./assets/around-03.png');
+  background-size: contain;
+}
+.around-04{
+  background: url('./assets/around-04.png');
+  background-size: contain;
+}
+.around-05{
+  background: url('./assets/around-05.png');
+  background-size: contain;
+}
+.around-06{
+  background: url('./assets/around-06.png');
+  background-size: contain;
+}
+.around-07{
+  background: url('./assets/around-07.png');
+  background-size: contain;
+}
+.around-08{
+  background: url('./assets/around-08.png');
+  background-size: contain;
+}
+
+.mines-click{
+  background: url('./assets/mines-click.png');
+  background-size: contain;
+}
+.bomb-search{
+  background: url('./assets/bomb-search.png');
+  background-size: contain;
+}
